@@ -93,3 +93,4 @@ hs_err_pid*
 .idea/libraries/
 .idea/vcs.xml
 .idea/workspace.xml
+/demo/

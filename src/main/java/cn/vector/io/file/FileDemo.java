@@ -27,9 +27,11 @@ public class FileDemo {
             System.out.println("file2是否为目录 : " + file2.isDirectory());
             System.out.println("file2是否为文件 ：" + file2.isFile());
         }
-        File file3 = new File("F:\\tmp\\vector\\日记1.txt");
+        //两种方式
+        //File file3 = new File("F:\\tmp\\vector\\日记1.txt");
+        File file3 = new File("F:\\tmp\\vector", "日记1.txt");
         if(!file3.exists()){
-            System.out.println("file3文件不存在,则创建一个新文件\"F:\\tmp\\vector\\日记1.txt！\"");
+            System.out.println("file3文件不存在,则创建一个新文件\"F:\\tmp\\vector\\日记1.txt\"!");
             file3.createNewFile();
         }else{
             System.out.println("file3文件存在，删除文件！");
@@ -40,6 +42,24 @@ public class FileDemo {
             System.out.println("file3是否为目录 : " + file3.isDirectory());
             System.out.println("file3是否为文件 ：" + file3.isFile());
         }
+        File file4 = new File("F:\\tmp\\vector", "日记2.txt");
+        if(!file4.exists()){
+            System.out.println("file4文件不存在,则创建一个新文件\"F:\\tmp\\vector\\日记2.txt\"!");
+            file4.createNewFile();
+        }
+        //常用的File对象的API
+        System.out.println("####常用的File对象的API####");
+        System.out.println("显示文件信息file.toString");
+        System.out.println("目录：" + file1);
+        System.out.println("文件：" + file4);
+        System.out.println("file.getAbsolutePath()显示绝对路径");
+        System.out.println(file4.getAbsolutePath());
+        //System.out.println("file.getAbsoluteFile()显示绝对路径文件");
+        //System.out.println(file4.getAbsoluteFile());
+        System.out.println("file.getName()显示文件名");
+        System.out.println(file4.getName());
+        System.out.println("file.getParent()显示父目录");
+        System.out.println(file4.getParent());
 
     }
 }
